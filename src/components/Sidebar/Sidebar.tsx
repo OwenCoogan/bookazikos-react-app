@@ -1,4 +1,8 @@
-import SidebarLink from './Sidebar-Link';
+import SidebarLink from '../Sidebar-Link';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from 'react-router-dom';
 
 
 export default function Sidebar(){
@@ -17,16 +21,34 @@ export default function Sidebar(){
 
 		<ul>
       <SidebarLink
-        path={'/dashboard'}
         variant="dashboard"
-      />
+      >
+        <Link
+          to="/dashboard"
+        >
+          <DashboardIcon />
+        </Link>
+      </SidebarLink>
       <SidebarLink
-        RouteLink={'/settings'}
         variant="settings"
-      />
+      >
+        <Link
+          to="/settings"
+        >
+          <SettingsIcon />
+        </Link>
+      </SidebarLink>
+			<SidebarLink
+        variant="profile"
+      >
+        <Link
+          to="/profile"
+        >
+          <AccountCircleIcon />
+        </Link>
+      </SidebarLink>
 
 		</ul>
-
 		<div className="mt-auto h-16 flex items-center w-full">
 			<button
 				className="h-16 w-10 mx-auto flex justify-center items-center focus:text-orange-500 hover:bg-red-200 focus:outline-none">
@@ -36,11 +58,7 @@ export default function Sidebar(){
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round">
+					fill="none">
 					<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 					<polyline points="16 17 21 12 16 7"></polyline>
 					<line x1="21" y1="12" x2="9" y2="12"></line>

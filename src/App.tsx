@@ -1,25 +1,18 @@
 import React from 'react';
-import './App.css';
-import Sidebar from './components/Sidebar'
+import './style/App.css';
+import Sidebar from './components/Sidebar/Sidebar'
 import {
   BrowserRouter as Router,
-  Route,
-  Routes
 
 } from "react-router-dom";
-import Dashboard from './screens/Dashboard';
+import AuthProvider from './router/provider/AuthProvider';
 
 function App() {
   return (
     <Router>
       <div className="h-screen w-screen flex bg-gray-200" >
         <Sidebar/>
-        <Routes>
-          <Route
-            path="/dashboard"
-            element={<Dashboard/>}
-          />
-        </Routes>
+        <AuthProvider />
       </div>
     </Router>
   );
