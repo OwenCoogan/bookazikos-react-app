@@ -1,10 +1,9 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function useLoginForm(data:any){
-  console.log(data.data.data)
-  if(data.data.data.token){
-    toast.success(`Successfully Logged In , Welcome ${data.data.data.user.name}!`, {
+export default function useCreateBandForm(data:any){
+  if(data.data.data){
+    toast.success('Successfully created Band!', {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -13,10 +12,9 @@ export default function useLoginForm(data:any){
       draggable: true,
       progress: undefined,
     });
-    localStorage.setItem('Bookazikos-token', data.data.data.token);
 
   }
-  else if(data.data.err!== undefined){
+  else if(data.data.err){
     toast.warn(data.data.err, {
       position: "top-center",
       autoClose: 5000,

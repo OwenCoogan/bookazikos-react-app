@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import SubmitInput from '../../../design-system/input/submit-input/SubmitInput';
-import TextInput from '../../../design-system/input/text-input/TextInput';
+import SubmitInput from '../../../../design-system/input/submit-input/SubmitInput';
+import TextInput from '../../../../design-system/input/text-input/TextInput';
 import useLoginForm from './hook/useLoginForm';
 
 export default function LoginForm() {

@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import LoginScreen from '../../../screens/Login/LoginScreen';
-import RegisterScreen from '../../../screens/Register/RegisterScreen';
+import LoginScreen from '../../../screens/Auth/Login/LoginScreen';
+import RegisterScreen from '../../../screens/Auth/Register/RegisterScreen';
 
 export default function PublicRoutes(){
   return (
