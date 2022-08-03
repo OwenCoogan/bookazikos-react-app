@@ -6,12 +6,14 @@ import {
 
 } from "react-router-dom";
 import AuthProvider from './router/provider/AuthProvider';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <Router>
       <div className="h-screen w-screen flex bg-gray-200" >
         <Sidebar/>
+        <ToastContainer />
         <AuthProvider />
       </div>
     </Router>

@@ -1,5 +1,5 @@
-import CardContainer from '../../design-system/card-container/CardContainer';
-import Card from '../../design-system/card/Card';
+import CardContainer from '../../design-system/Layout/card-container/CardContainer';
+import Card from '../../design-system/Layout/card/Card';
 
 const cardContent = [
   {
