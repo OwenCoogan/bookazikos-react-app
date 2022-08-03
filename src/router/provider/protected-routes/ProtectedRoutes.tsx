@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import CreateBandScreen from '../../../screens/CreateBand/CreateBandScreen';
+import CreateBandScreen from '../../../screens/Band/CreateBand/CreateBandScreen';
+import ShowBandScreen from '../../../screens/Band/ShowBand/ShowBandScreen';
 import Dashboard from '../../../screens/Dashboard/Dashboard';
 
 export default function ProtectedRoutes(){
@@ -12,6 +13,10 @@ export default function ProtectedRoutes(){
       <Route
         path="/create-band"
         element={<CreateBandScreen/>}
+      />
+      <Route
+        path="/band/:bandId"
+        element={<ShowBandScreen/>}
       />
     </Routes>
   )

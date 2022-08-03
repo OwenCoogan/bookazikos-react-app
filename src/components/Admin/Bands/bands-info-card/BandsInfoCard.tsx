@@ -2,15 +2,9 @@ import { SettingsBackupRestore } from '@mui/icons-material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BandType } from '../../../../@types/@types';
 import Card from '../../../../design-system/Layout/card/Card';
 
-type BandType = {
-  name: string;
-  description: string;
-  style: string;
-  city: string;
-  id: string;
-}
 
 export default function BandsInfoCard(){
   const [bands, setBands] = useState([]);
