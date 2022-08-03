@@ -2,8 +2,10 @@ import ProtectedRoutes from './protected-routes/ProtectedRoutes';
 import PublicRoutes from './public-routes/PublicRoutes';
 
 export default function AuthProvider() {
-  const isAuthenticated = false
+  const cookie = localStorage.getItem('Bookazikos-token');
+  const isLoggedIn = cookie !== null;
+  console.log(isLoggedIn);
   return (
-    isAuthenticated !== false ? <ProtectedRoutes/> : <PublicRoutes/>
+    isLoggedIn ===true ? <ProtectedRoutes/> : <PublicRoutes/>
   );
 }
